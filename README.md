@@ -1,8 +1,11 @@
 # Setup React application.
 
 This is a proposal on how to setup project.
-
 If you would like to get more information on what package was included and what was the reason, then [visit PACKAGE_INFO file](PACKAGE_INFO.md)
+
+## Example project.
+
+Project's requirements are [here](PROJECT_REQUIREMENTS.md)
 
 ## How to setup?
 
@@ -28,8 +31,12 @@ where:
 
 ## TODO.
 
+[-] Add example project requirements
+
 [-] Add JSDOCS
 
 [-] Add GIT hook scripts to check commit massages and to run tests on commit
 
 [-] Add React router
+
+[-] Add comments on how to use semver
