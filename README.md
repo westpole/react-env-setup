@@ -31,12 +31,12 @@ where:
 
 ## TODO.
 
-[-] Add example project requirements
+- [x] Add example project requirements
 
-[-] Add JSDOCS
+- [ ] Add JSDOCS
 
-[-] Add GIT hook scripts to check commit massages and to run tests on commit
+- [ ] Add GIT hook scripts to check commit massages and to run tests on commit
 
-[-] Add React router
+- [ ] Add React router
 
-[-] Add comments on how to use semver
+- [ ] Add comments on how to use semver
