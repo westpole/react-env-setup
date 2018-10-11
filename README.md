@@ -40,3 +40,9 @@ where:
 - [ ] Add React router
 
 - [ ] Add comments on how to use semver
+
+- [ ] Connect Snyk (https://snyk.io/)
+
+- [ ] add node-uuid package
+
+- [ ] add Error handler (display human readable error messages and log detailed info for developer)
