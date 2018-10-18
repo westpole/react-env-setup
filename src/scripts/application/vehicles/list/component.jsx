@@ -18,7 +18,7 @@ function generateList(item) {
 
   return (
     <section className="vehicle-entity" key={uuidv4()}>
-      {dataList.map((key) => (
+      {dataList.map(key => (
         <div data-type={key} key={uuidv4()}>
           {item[key]}
         </div>
