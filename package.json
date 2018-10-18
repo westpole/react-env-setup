@@ -1,6 +1,6 @@
 {
   "name": "react-env-setup",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This is a blueprint for React application setup.",
   "main": "index.js",
   "scripts": {
