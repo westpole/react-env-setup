@@ -7,6 +7,20 @@ If you would like to get more information on what package was included and what 
 
 Project's requirements are [here](PROJECT_REQUIREMENTS.md)
 
+Project has sets of coding style rules, that controls by ESLint library.
+More on [the set of rules could be found here](ESLINT_RULESET.md).
+This library help developer to keep code base style the same which should reduce time on reading and understanding other developer's code.
+ESLint also helps junior developer to learn how to write correctly.
+Code base will be checked each time:
+
+  - before run in development mode (npm start)
+  - before run of unit tests set
+  - before commit to GIT local repository
+
+You can also run check manually:
+
+    npm run lint
+
 ## How to setup?
 
 ## How to run in development?
@@ -48,8 +62,6 @@ where:
 - [ ] add TODO list generator (CHANGELOG.md)
 
 - [ ] update ESLint to check for "console.log"
-
-- [ ] add ESLint rule set (ESLINT_RULESET.md)
 
 - [ ] add a section on how to collaborate and how to log an issue
 
