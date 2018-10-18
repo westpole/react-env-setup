@@ -11,7 +11,11 @@ Project's requirements are [here](PROJECT_REQUIREMENTS.md)
 
 ## How to run in development?
 
-## How to prepare code for production?
+## How to prepare code to release?
+
+Add new version to the code base.
+
+    npm version [major|minor|patch]
 
 ## How to commit any changes?
 
@@ -39,8 +43,6 @@ where:
 
 - [ ] Add comments on how to use semver
 
-- [ ] Connect Snyk (https://snyk.io/)
-
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)
 
 - [ ] add TODO list generator (CHANGELOG.md)
@@ -54,3 +56,5 @@ where:
 - [ ] setup autoprefixer for CSS
 
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
+
+- [ ] connect to Travis CI and Coverall

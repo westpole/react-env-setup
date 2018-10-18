@@ -12,7 +12,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [reactjs.org](https://reactjs.org/docs/hello-world.html)
+  - Official documentation could be found at [reactjs.org](https://reactjs.org/docs/hello-world.html)
   - [React courses on egghead.io](https://egghead.io/browse/frameworks/react)
 
 ## Redux
@@ -27,7 +27,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [redux.js.org](https://redux.js.org/)
+  - Official documentation could be found at [redux.js.org](https://redux.js.org/)
 
 ## Redux-Saga
 
@@ -39,7 +39,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [redux-saga.js.org](https://redux-saga.js.org/)
+  - Official documentation could be found at [redux-saga.js.org](https://redux-saga.js.org/)
 
 ## Webpack
 
@@ -66,7 +66,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [webpack.js.org](https://webpack.js.org/concepts/)
+  - Official documentation could be found at [webpack.js.org](https://webpack.js.org/concepts/)
 
 ## Babel
 
@@ -87,7 +87,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [babeljs.io](https://babeljs.io/)
+  - Official documentation could be found at [babeljs.io](https://babeljs.io/)
 
 ## ESLint
 
@@ -105,7 +105,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [eslint.org](https://eslint.org/)
+  - Official documentation could be found at [eslint.org](https://eslint.org/)
 
 ## SASS
 
@@ -113,7 +113,7 @@ Stable and powerful preprocessor for CSS language. Webpack extention **sass-load
 
 Links:
 
-  - Official documentation could be found on [sass-lang.com](https://sass-lang.com/)
+  - Official documentation could be found at [sass-lang.com](https://sass-lang.com/)
 
 ## Jest
 
@@ -127,7 +127,7 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [jestjs.io](https://jestjs.io/)
+  - Official documentation could be found at [jestjs.io](https://jestjs.io/)
 
 ## Enzyme
 
@@ -141,14 +141,23 @@ Package list:
 
 Links:
 
-  - Official documentation could be found on [airbnb.io/enzyme](https://airbnb.io/enzyme/)
+  - Official documentation could be found at [airbnb.io/enzyme](https://airbnb.io/enzyme/)
 
 ## Useful libraries
 
-#### UUID
+### UUID
 
 Simple, fast generation of RFC4122 UUIDS. I am going to use `Version 4` that generates sequence ramdomly.
 
 Links:
 
-  - Official documentation could be found on [www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
+  - Official documentation could be found at [www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
+
+### Snyk
+
+Snyk’s CLI helps you find and fix known vulnerabilities in your dependencies, both ad hoc and as part of your CI (Build) system.
+It supports Node.js, Ruby, Python, Java, Scala, Go and .NET.
+
+Links:
+
+  - Official documentation could be found at [app.snyk.io/docs/using-snyk](https://app.snyk.io/docs/using-snyk)
