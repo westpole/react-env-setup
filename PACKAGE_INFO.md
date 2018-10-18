@@ -142,3 +142,13 @@ Package list:
 Links:
 
   - Official documentation could be found on [airbnb.io/enzyme](https://airbnb.io/enzyme/)
+
+## Useful libraries
+
+#### UUID
+
+Simple, fast generation of RFC4122 UUIDS. I am going to use `Version 4` that generates sequence ramdomly.
+
+Links:
+
+  - Official documentation could be found on [www.npmjs.com/package/uuid](https://www.npmjs.com/package/uuid)
