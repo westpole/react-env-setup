@@ -23,45 +23,61 @@ You can also run check manually:
 
 ## How to setup?
 
+Firstly, you should clone git repository into your local environment (desktop, laptop, etc.)
+
+Next, you should install NPM packages by running command below:
+
+    npm install
+
 ## How to run in development?
+
+## How to commit any changes to GIT repository?
+
+This project uses `conventional-changelog` module to generate a changelog from git metadata.
+
+#### Recommended workflow
+
+  1. Make changes
+  2. Commit those changes to a Feature or a Bug branch
+  3. Make sure CI server turns green
+  4. Merge branch to release branch (ex. master)
+  4. Bump version in package.json by running command below
+
+          npm version [major|minor|patch]
+
+  5. Generate Changelog
+
+          npm run changelog
+
+  6. Commit package.json and CHANGELOG.md files
+
+          npm add .
+          npm commit -m "Release, <date>"
+
+  8. Push changes and tags
+
+          npm push <origin> <remote branch>
+          npm push --tags
+
+For more details on how to construct commit message see at [ESLint Convention](COMMIT_RULES.md).
 
 ## How to prepare code to release?
 
-Add new version to the code base.
-
-    npm version [major|minor|patch]
-
-## How to commit any changes?
-
-Commit message should follow the next pattern:
-
-    1:Scope : 2:explanation what was done
-
-where:
-
-**1:Scope** - could be one of the labels:
-
-  - **Example**: should be used to describe any changes that was done to the code in **src** folder
-  - **Dev**: should be used to describe any changes in environment configuration (webpack, babel, etc.)
-  - **Comments**: should be used to describe any changes to documentation (README, JSDOCS)
+Make sure that all code changes were fully tested and committed to the `master` branch.
 
 ## Known issues
 
 ## TODO
 
-- [ ] Add JSDOCS
+- [ ] Add JSDOCS (specify doc generator npm script)
 
 - [ ] Add GIT hook scripts to check commit massages and to run tests on commit (add message format)
 
 - [ ] Add React router
 
-- [ ] Add comments on how to use semver
-
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)
 
-- [ ] add TODO list generator (CHANGELOG.md)
-
-- [ ] update ESLint to check for "console.log"
+- [ ] add a checker for "console.log"
 
 - [ ] add a section on how to collaborate and how to log an issue
 
@@ -70,3 +86,21 @@ where:
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
 
 - [ ] connect to Travis CI and Coverall
+
+- [ ] add setup GIT hooks in NPM post-install phase
+
+- [ ] check how webpack reloads if URL contain other than root path (set publickPath to '/*' to fix issue)
+
+- [ ] investigate react-vistualized
+
+- [ ] Add react international package
+
+- [ ] Investigate on how to monitor Reducers in dev environment (log state history). More on Redux docs in recipes section.
+
+- [ ] use local-storage service (code base) to save UI user settings
+
+- [ ] add unit tests, set GIT commit to rely on coverage level
+
+- [ ] add integration
+
+- [ ] add e2e tests

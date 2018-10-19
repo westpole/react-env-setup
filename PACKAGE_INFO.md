@@ -161,3 +161,17 @@ It supports Node.js, Ruby, Python, Java, Scala, Go and .NET.
 Links:
 
   - Official documentation could be found at [app.snyk.io/docs/using-snyk](https://app.snyk.io/docs/using-snyk)
+
+### conventional-changelog
+
+Generate a changelog from git metadata.
+
+Package list:
+
+  - `conventional-changelog-cli`
+  - `conventional-changelog-eslint` (this is a set of rules for Commit message format)
+
+Links:
+
+  - Official documentation for [conventional-changelog-cli](https://www.npmjs.com/package/conventional-changelog-cli)
+  - Official documentation for [conventional-changelog-eslint](https://www.npmjs.com/package/conventional-changelog-eslint)
