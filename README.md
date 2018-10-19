@@ -71,8 +71,6 @@ Make sure that all code changes were fully tested and committed to the `master` 
 
 - [ ] Add JSDOCS (specify doc generator npm script)
 
-- [ ] Add GIT hook scripts to check commit massages and to run tests on commit (add message format)
-
 - [ ] Add React router
 
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)

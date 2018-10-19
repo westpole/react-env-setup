@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Script should run checks on localhost code base
+# before code changes would be committed into the repository
+
+# check code errors before commit
+npm run lint
+
+# test code functionality before commit
+npm test

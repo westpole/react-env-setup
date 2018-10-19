@@ -5,7 +5,7 @@ Be sure to follow the commit message conventions.
 
 Commit message summaries must follow this basic format:
 
-    Tag: Message (fixes #1234)
+    Tag: Message (task #1234)
 
 The Tag is one of the following:
 
