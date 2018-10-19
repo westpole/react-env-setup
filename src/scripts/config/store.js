@@ -7,6 +7,21 @@
  *
  * Saga official documentation:
  * @see  https://redux-saga.js.org/docs/basics/
+ *
+ * Application store tree:
+ *
+ *  store: {
+ *    vehicles: [ ... ],
+ *    sort: {
+ *      type: "asc|desc|null",
+ *      column: <column id>,
+ *    },
+ *    page: {
+ *      number: <page #>,
+ *      size: <how many items per page>,
+ *    },
+ *    selected: [ list of item.id ]
+ *  }
  */
 
 import { createStore, applyMiddleware } from 'redux';
@@ -22,7 +37,5 @@ const store = createStore(
 );
 
 sagaMiddleware.run(rootSaga);
-
-// @TODO: test store.subscribe()
 
 export default store;

@@ -104,3 +104,5 @@ Make sure that all code changes were fully tested and committed to the `master` 
 - [ ] add integration
 
 - [ ] add e2e tests
+
+- [ ] Set script to prepare app for a release
