@@ -1,14 +1,14 @@
 # Setup React application.
 
 This is a proposal on how to setup project.
-If you would like to get more information on what package was included and what was the reason, then [visit PACKAGE_INFO file](PACKAGE_INFO.md)
+If you would like to get more information on what package was included and what was the reason, then [visit PACKAGE_INFO file](documentation/PACKAGE_INFO.md)
 
 ## Example project
 
-Project's requirements are [here](PROJECT_REQUIREMENTS.md)
+Project's requirements are [here](documentation/PROJECT_REQUIREMENTS.md)
 
 Project has sets of coding style rules, that controls by ESLint library.
-More on [the set of rules could be found here](ESLINT_RULESET.md).
+More on [the set of rules could be found here](documentation/ESLINT_RULESET.md).
 This library help developer to keep code base style the same which should reduce time on reading and understanding other developer's code.
 ESLint also helps junior developer to learn how to write correctly.
 Code base will be checked each time:
@@ -59,7 +59,7 @@ This project uses `conventional-changelog` module to generate a changelog from g
           npm push <origin> <remote branch>
           npm push --tags
 
-For more details on how to construct commit message see at [ESLint Convention](COMMIT_RULES.md).
+For more details on how to construct commit message see at [ESLint Convention](documentation/COMMIT_RULES.md).
 
 ## How to prepare code to release?
 
