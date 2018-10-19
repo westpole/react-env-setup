@@ -4,7 +4,7 @@ Data will be fetched from [https://swapi.co/api/](https://swapi.co/api/) API end
 
 ## Design
 
-![example 1 mockup](assets/mockup/example-1.jpg "Example 1 mockup")
+![example 1 mockup](../assets/mockup/example-1.jpg "Example 1 mockup")
 
 ## Technical requirements
 
