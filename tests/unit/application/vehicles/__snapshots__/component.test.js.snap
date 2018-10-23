@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application/Vehicles/Component should match saved snapshot 1`] = `
+<article
+  className="vehicles-wrapper"
+>
+  <h1>
+    Star Wars vehicles dictionary
+  </h1>
+  <Connect(ListComponent)
+    fetchVehicles={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+  />
+</article>
+`;

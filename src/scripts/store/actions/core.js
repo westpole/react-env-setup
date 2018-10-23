@@ -8,8 +8,8 @@ export function fetchData(config = {}) {
   };
 }
 
-export function sortData(direction) {
+export function sortData(direction = 'none') {
   return {
-    type: CONSTANTS[`SORT_${direction.toUpperCase()}`],
+    type: CONSTANTS[`SORT_${direction.toUpperCase()}`] || 'none',
   };
 }

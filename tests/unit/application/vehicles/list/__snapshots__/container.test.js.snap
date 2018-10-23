@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application/Vehicles/List/Container should match saved snapshot 1`] = `
+<ListComponent
+  dispatch={[Function]}
+  vehicles={Array []}
+/>
+`;

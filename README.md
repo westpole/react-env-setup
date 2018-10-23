@@ -85,8 +85,6 @@ Make sure that all code changes were fully tested and committed to the `master` 
 
 - [ ] connect to Travis CI and Coverall
 
-- [ ] add setup GIT hooks in NPM post-install phase
-
 - [ ] check how webpack reloads if URL contain other than root path (set publickPath to '/*' to fix issue)
 
 - [ ] investigate react-vistualized

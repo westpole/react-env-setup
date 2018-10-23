@@ -6,19 +6,17 @@ module.exports = {
   testMatch: [
     '**/?(*.)+(spec|test).js?(x)'
   ],
+  roots: [
+    '<rootDir>/tests/unit/'
+  ],
   collectCoverage: true,
   coverageReporters: [
     'html',
     'lcov'
   ],
-  roots: [
-    '<rootDir>/tests/unit/'
-  ],
   collectCoverageFrom: [
     '**/*.{js,jsx}',
     '!**/src/scripts/index.jsx',
-    '!**/src/assets/**',
-    '!**/src/styles/**',
     '!enzyme.config.js',
     '!jest.config.js',
     '!webpack.common.js',
@@ -27,7 +25,8 @@ module.exports = {
     '!**/coverage/**',
     '!**/assets/**',
     '!**/documentation/**',
-    '!**/node_modules/**'
+    '!**/node_modules/**',
+    '!**/tests/tools/**'
   ],
   setupTestFrameworkScriptFile: './enzyme.config.js',
   coverageThreshold: {

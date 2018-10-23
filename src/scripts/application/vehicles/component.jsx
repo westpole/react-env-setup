@@ -21,17 +21,12 @@ import PropTypes from 'prop-types';
 import List from './list/container';
 
 class VehiclesComponent extends React.Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    const { fetchVehicles } = this.props;
 
-    // request for data on Component load
-    this.componentDidMount = function componentDidMount() {
-      const { fetchVehicles } = this.props;
-
-      // Populate list with data on page load;
-      // dispatch an action to Saga
-      fetchVehicles();
-    };
+    // Populate list with data on page load;
+    // dispatch an action to Saga
+    fetchVehicles();
   }
 
   render() {

@@ -23,8 +23,11 @@ export const loadState = (user) => {
 export const saveState = (user, config) => {
   try {
     localStorage.setItem(user, JSON.stringify(config));
+
+    return true;
   } catch (error) {
     // Ask for a request to send the error message to dev.
     // Show the error notification to user.
+    return false;
   }
 };
