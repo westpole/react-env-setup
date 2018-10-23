@@ -7,6 +7,13 @@ const mockMap = {
   mount,
 };
 
+/**
+ * Check parameters
+ *
+ * @param   {object} params mock Component parameters
+ *
+ * @returns {object}        sanitized map of parameters
+ */
 function checkParams(params) {
   // check params type
 
@@ -25,7 +32,16 @@ function checkParams(params) {
   return params;
 }
 
+/**
+ * Generates shallow or mount copy of React Component
+ *
+ * @param   {object} params mock parameters
+ *
+ * @returns {object}        wrapper for React component
+ */
 export function mockComponent(params) {
+  // type could be shallow or mount
+  // scope is a React Component
   const {
     type,
     props = {},
@@ -39,7 +55,16 @@ export function mockComponent(params) {
   );
 }
 
+/**
+ * Generates shallow or mount copy of Redux Container htat connected to a React Component
+ *
+ * @param   {object} params mock parameters
+ *
+ * @returns {object}        wrapper for React component
+ */
 export function mockWithStore(params) {
+  // type could be shallow or mount
+  // scope is a React Component
   const {
     type,
     props = {},

@@ -69,8 +69,6 @@ Make sure that all code changes were fully tested and committed to the `master` 
 
 ## TODO
 
-- [ ] Add JSDOCS (specify doc generator npm script)
-
 - [ ] Add React router
 
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)
@@ -95,7 +93,7 @@ Make sure that all code changes were fully tested and committed to the `master` 
 
 - [ ] use local-storage service (code base) to save UI user settings
 
-- [ ] add unit tests, set GIT commit to rely on coverage level
+- [ ] set GIT commit to rely on coverage level
 
 - [ ] add integration
 

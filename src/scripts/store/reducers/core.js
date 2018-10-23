@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 
 import CONSTANTS from '../../config/constants';
+
+// list of Reducers
 import vehicleReducer from './vehicles';
 
 const initialState = {
@@ -8,6 +10,7 @@ const initialState = {
 };
 
 const vehicles = (state = initialState.vehicles, action) => {
+  // each reducer is mapped as <event name>: <reducer fn>
   const handlers = {
     [CONSTANTS.FETCH_SUCCESS]: vehicleReducer,
   };
