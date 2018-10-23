@@ -33,9 +33,9 @@ for file in $FILES
 do
     SUBSTRING=$(echo ${file} | grep -oP "[a-zA-Z0-9\-]{1,}$")
     echo " ${YELLOW}[ ]${NC} Coping $SUBSTRING ..."
-    sudo cp -n ${file} .git/hooks
+    cp -n ${file} .git/hooks
     echo " ${YELLOW}[ ]${NC} Set $SUBSTRING executable"
-    sudo chmod +x .git/hooks/"$SUBSTRING"
+    chmod +x .git/hooks/"$SUBSTRING"
 done
 
 echo "${LIGHTBLUE}"

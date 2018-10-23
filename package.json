@@ -6,13 +6,13 @@
   "scripts": {
     "lint": "eslint src/scripts/** --ext .jsx,.js --color",
     "lint-test": "eslint tests/** --ext .js --color",
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0",
+    "module-test": "snyk test",
     "start": "npm run lint && webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
     "test": "npm run lint-test && jest --color",
     "tdd": "npm run lint-test && jest --color --watchAll",
     "snapshot-update": "jest -u --color",
-    "module-test": "snyk test",
-    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0"
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
     "React",
