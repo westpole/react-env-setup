@@ -78,6 +78,7 @@ Package list:
   - `@babel/core` (This is the main package)
   - `babel-loader` (This package allows transpiling JavaScript files using Babel and webpack)
   - `@babel/plugin-transform-regenerator` (Transform async/generator functions with regenerator)
+  - `@babel/plugin-proposal-class-properties` (Enables properties and functions for ES6 class)
   - `@babel/preset-env` (Babel preset that compiles ES2015+ down to ES5 by automatically determining the Babel plugins and polyfills you need based on your targeted browser or runtime environments)
   - `@babel/preset-react` (Babel preset for all React plugins)
   - `babel-core^7.0.0-bridge.0` (Fix the issue with Babel 7's transition to scopes, [more here](https://github.com/babel/babel-bridge))
@@ -175,3 +176,11 @@ Links:
 
   - Official documentation for [conventional-changelog-cli](https://www.npmjs.com/package/conventional-changelog-cli)
   - Official documentation for [conventional-changelog-eslint](https://www.npmjs.com/package/conventional-changelog-eslint)
+
+### leasot
+
+Parse and output TODOs and FIXMEs from comments in your files
+
+Links:
+
+  - Official documentation could be found at [npmjs.com/package/leasot](https://www.npmjs.com/package/leasot)

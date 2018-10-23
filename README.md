@@ -50,12 +50,28 @@ Use `bash` script to setup project (it also works on Window with GIT Bash that w
 
         npm test
 
-## How to run in development?
+## Development phase
 
 Code base will be checked against `code style rule set` each time you start development.
 Application will be rejected if ESLint found any error.
 
     npm start
+
+As a developer you responsible to keep code base clean and bug free.
+But, there are times when you can't perform refactoring right away, or you see possible bug that is out of your task scope.
+Then you should make a comment on that as it shown below:
+
+    // TODO: implement me
+    // FIXME: this is a bug (comment on code)
+
+TODO list should be checked by PM or team lead to keep project healthy.
+
+    # to generate a list of required actions (TODO.md)
+    npm run todo-cli
+
+    # to see a list in terminal
+    npm run todo
+
 
 ## How to commit any changes to GIT repository?
 
