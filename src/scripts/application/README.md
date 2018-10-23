@@ -3,15 +3,30 @@
 This example should give an answer to a number of chalanges that could face a developer,
 while working on React application.
 
-## TODO list
+### If `Data Sort` is requested
 
-1. How to manage Store with big data?
+Any type of sorting could be applied to a set of data (any amount of data).
+If you are using reducer, then input amount should equal to an output amount of data.
 
-2. How to store data If it came from remote server and it devided by page?
+### If `Data filter` is requested
 
-3. Separate UI configuration and User data.
+This operation requires to reduce amount of visible data to a specific one by provided `id`.
+In this case we can't rely on visible data as user interface would be broken
+(user would see different amount of data per page or no data at all).
+So, filter type should be a part of a REST API request.
 
-## Application folder structure
+One could argue to run filter on saved data (save response to a localStorage or to a memory),
+but we can't be sure how much data user requested already or what technical limitations for one's laptop.
+
+Filter change could be applied through `componentDidUpdate` function.
+
+    componentDidUpdate(prevProps) {
+      const { filter } = this.props;
+
+      if (filter !== prevProps.filter) {
+        // fetch new batch of data
+      }
+    }
 
 ## Application logic
 

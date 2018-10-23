@@ -23,13 +23,39 @@ You can also run check manually:
 
 ## How to setup?
 
-Firstly, you should clone git repository into your local environment (desktop, laptop, etc.)
+Firstly, you should clone git repository into your local environment (desktop, laptop, etc.).
 
-Next, you should install NPM packages by running command below:
+Then there are two ways to install project.
 
-    npm install
+##### First
+
+Use `bash` script to setup project (it also works on Window with GIT Bash that was installed with UNIX command helpers).
+
+    ./setup-project.sh
+
+##### Second
+
+1. Copy GIT hook scripts into the GIT folder:
+
+        cp assets/git-hooks/* .git/hooks/
+        chmod +x .git/hooks/commit-msg
+        chmod +x .git/hooks/post-merge
+        chmod +x .git/hooks/pre-commit
+
+2. Install NPM dependencies:
+
+        npm install
+
+3. Run unit tests to generate Test coverage data:
+
+        npm test
 
 ## How to run in development?
+
+Code base will be checked against `code style rule set` each time you start development.
+Application will be rejected if ESLint found any error.
+
+    npm start
 
 ## How to commit any changes to GIT repository?
 
