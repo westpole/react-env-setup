@@ -109,8 +109,6 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)
 
-- [ ] add a checker for "console.log"
-
 - [ ] setup autoprefixer for CSS
 
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
@@ -123,11 +121,7 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 - [ ] Add react international package
 
-- [ ] Investigate on how to monitor Reducers in dev environment (log state history). More on Redux docs in recipes section.
-
 - [ ] use local-storage service (code base) to save UI user settings
-
-- [ ] set GIT commit to rely on coverage level
 
 - [ ] add integration
 

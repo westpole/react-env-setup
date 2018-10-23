@@ -7,6 +7,7 @@ import {
 
 import Api from '../services/api';
 import CONSTANTS from './constants';
+import logManager from './log-manager';
 
 /**
  * Retrieves data by provided URL and dispatches an event with response payload
@@ -20,10 +21,16 @@ function* fetchVehicles() {
       'https://swapi.co/api/vehicles/',
     );
 
-    yield put({
+    const action = {
       type: CONSTANTS.FETCH_SUCCESS,
       vehicles: response.results,
-    });
+    };
+
+    if (process.env.NODE_ENV !== 'production') {
+      logManager.outputLog('action', CONSTANTS.FETCH_SUCCESS, [action]);
+    }
+
+    yield put(action);
   } catch (error) {
     // @TODO: remove
     // eslint-disable-next-line
