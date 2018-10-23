@@ -87,9 +87,19 @@ This project uses `conventional-changelog` module to generate a changelog from g
 
 For more details on how to construct commit message see at [ESLint Convention](documentation/COMMIT_RULES.md).
 
-## How to prepare code to release?
+## How to contribute?
 
-Make sure that all code changes were fully tested and committed to the `master` branch.
+Firstly, you should set a working copy on your localhost.
+Secondly, create a feature/bug branch from the origin source.
+
+Then commit all changes to your branch. Do not forget about unit tests.
+Check out `commit message format` requirements in `documentation/COMMIT_RULES.md`.
+
+And the final step is to create a PR.
+
+## How to report a bug?
+
+You should create an **Issue**. More on how to do it on [github help](https://help.github.com/articles/creating-an-issue/).
 
 ## Known issues
 
@@ -100,8 +110,6 @@ Make sure that all code changes were fully tested and committed to the `master` 
 - [ ] add Error handler (display human readable error messages and log detailed info for developer)
 
 - [ ] add a checker for "console.log"
-
-- [ ] add a section on how to collaborate and how to log an issue
 
 - [ ] setup autoprefixer for CSS
 
