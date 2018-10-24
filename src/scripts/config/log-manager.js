@@ -7,14 +7,23 @@ const outputColorScheme = {
 /**
  * Output data into Browser console
  *
+ * NOTE: this function is not coverred by unit test
+ * as we rely on output only in development mode.
+ * Also it polutes test runner output.
+ *
  * @param   {string} id   event id
  * @param   {string} type action type
  * @param   {array}  info list of action data
  *
  * @returns {undefined}
  */
+/* istanbul ignore next */
 function outputLog(id, type, info) {
   /* eslint-disable no-console */
+
+  if (process.env.NODE_ENV === 'test') {
+    return;
+  }
 
   if (!console.group) {
     info.forEach((i) => {
@@ -63,12 +72,7 @@ const extendDispatch = function extendDispatch(rawDispatch) {
   };
 };
 
-const logError = function logError() {
-  // @TODO: implement
-};
-
 export default {
   outputLog,
   extendDispatch,
-  logError,
 };

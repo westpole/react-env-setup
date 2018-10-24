@@ -4,15 +4,27 @@ import CONSTANTS from '../../config/constants';
 
 // list of Reducers
 import vehicleReducer from './vehicles';
+import errorMap from './error-map';
 
 const initialState = {
   vehicles: [],
+  error: {},
 };
 
 const vehicles = (state = initialState.vehicles, action) => {
   // each reducer is mapped as <event name>: <reducer fn>
   const handlers = {
     [CONSTANTS.FETCH_SUCCESS]: vehicleReducer,
+  };
+
+  return handlers[action.type]
+    ? handlers[action.type](state, action)
+    : state;
+};
+
+const error = (state = initialState.error, action) => {
+  const handlers = {
+    [CONSTANTS.ERROR_SERVER_LIST]: errorMap,
   };
 
   return handlers[action.type]
@@ -38,6 +50,7 @@ const vehicles = (state = initialState.vehicles, action) => {
 // any name below should be the same as we are using in any Component/Container to access a data
 const rootReducer = combineReducers({
   vehicles,
+  error,
 });
 
 export default rootReducer;

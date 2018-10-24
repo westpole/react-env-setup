@@ -11,6 +11,7 @@ import Component from './component.jsx';
  */
 const mapStateToProps = state => ({
   vehicles: state.vehicles,
+  error: state.error,
 });
 
 export default connect(

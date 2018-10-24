@@ -3,7 +3,7 @@
  * No user personal or account infromation should be here.
  */
 
-// @TODO: add Error handler
+import logManager from './log-manager';
 
 export const loadState = (user) => {
   try {
@@ -15,7 +15,15 @@ export const loadState = (user) => {
 
     return JSON.parse(serializedState);
   } catch (error) {
-    // return as an empty configuration
+    if (process.env.NODE_ENV !== 'production') {
+      logManager.outputLog(
+        'error',
+        `localStorage: retrieve config for ${user}`,
+        [user],
+      );
+    }
+
+    // return an empty configuration on error
     return {};
   }
 };

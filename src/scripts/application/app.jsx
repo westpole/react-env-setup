@@ -3,8 +3,6 @@
  * It should connect together React, Redux and Saga.
  */
 
-// @TODO: investigate if need to load webworker for Saga requests
-
 import React from 'react';
 import { Provider } from 'react-redux';
 

@@ -72,6 +72,7 @@ TODO list should be checked by PM or team lead to keep project healthy.
     # to see a list in terminal
     npm run todo
 
+You could check current [TODO list status](TODO.md)
 
 ## How to commit any changes to GIT repository?
 
@@ -122,8 +123,6 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 ## TODO
 
 - [ ] Add React router
-
-- [ ] add Error handler (display human readable error messages and log detailed info for developer)
 
 - [ ] setup autoprefixer for CSS
 

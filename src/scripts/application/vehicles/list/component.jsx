@@ -30,17 +30,29 @@ function generateList(item) {
 /**
  * List component
  *
+ * #name: vehicles-list
+ *
  * @param {object} props Parent Component scope
  */
-const Component = function ListComponent(props) {
-  const { vehicles } = props;
+class Component extends React.PureComponent {
+  render() {
+    const { vehicles, error } = this.props;
 
-  return (
-    <article className="vehicle-list">
-      {vehicles.map(generateList)}
-    </article>
-  );
-};
+    if (error.message) {
+      return (
+        <article className="vehicle-list error">
+          {error.message}
+        </article>
+      );
+    }
+
+    return (
+      <article className="vehicle-list">
+        {vehicles.map(generateList)}
+      </article>
+    );
+  }
+}
 
 Component.propTypes = {
   vehicles: PropTypes.arrayOf(
@@ -52,6 +64,10 @@ Component.propTypes = {
       cost_in_credits: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  error: PropTypes.shape({
+    type: PropTypes.string,
+    message: PropTypes.string,
+  }).isRequired,
 };
 
 export default Component;

@@ -20,6 +20,11 @@ import PropTypes from 'prop-types';
 
 import List from './list/container';
 
+/**
+ * Vehicles data component
+ *
+ * #name: vehicles-wrapper
+ */
 class VehiclesComponent extends React.Component {
   componentDidMount() {
     const { fetchVehicles } = this.props;

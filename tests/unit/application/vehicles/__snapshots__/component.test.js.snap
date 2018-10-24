@@ -7,7 +7,7 @@ exports[`Application/Vehicles/Component should match saved snapshot 1`] = `
   <h1>
     Star Wars vehicles dictionary
   </h1>
-  <Connect(ListComponent)
+  <Connect(Component)
     fetchVehicles={
       [MockFunction] {
         "calls": Array [

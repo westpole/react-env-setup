@@ -10,6 +10,7 @@ describe('Application/Vehicles/List/Component', () => {
       scope: Component,
       props: {
         vehicles: [],
+        error: {},
       },
     });
 
@@ -30,6 +31,7 @@ describe('Application/Vehicles/List/Component', () => {
             cost_in_credits: '1234',
           },
         ],
+        error: {},
       },
     });
 
@@ -47,5 +49,20 @@ describe('Application/Vehicles/List/Component', () => {
     expect(list[2]).toEqual('1');
     expect(list[3]).toEqual('suv');
     expect(list[4]).toEqual('1234');
+  });
+
+  it('should display error message', () => {
+    const wrapper = mockComponent({
+      type: 'shallow',
+      scope: Component,
+      props: {
+        vehicles: [],
+        error: {
+          message: 'test error',
+        },
+      },
+    });
+
+    expect(wrapper.find('.error').length).toEqual(1);
   });
 });

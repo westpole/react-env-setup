@@ -32,9 +32,18 @@ function* fetchVehicles() {
 
     yield put(action);
   } catch (error) {
-    // @TODO: remove
-    // eslint-disable-next-line
-    console.log('fetchVehicles error', error);
+    if (process.env.NODE_ENV !== 'production') {
+      logManager.outputLog(
+        'error',
+        'Saga: fetchVehicles',
+        [error],
+      );
+    }
+
+    yield put({
+      type: CONSTANTS.ERROR_SERVER_LIST,
+      message: 'There is an issue with connection to a server.',
+    });
   }
 }
 
