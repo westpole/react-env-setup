@@ -184,3 +184,14 @@ Parse and output TODOs and FIXMEs from comments in your files
 Links:
 
   - Official documentation could be found at [npmjs.com/package/leasot](https://www.npmjs.com/package/leasot)
+
+### cross-env
+
+Most Windows command prompts will choke when you set environment variables with NODE_ENV=production like that.
+cross-env makes it so you can have a single command without worrying about setting
+or using the environment variable properly for the platform.
+Just set it like you would if it's running on a POSIX system, and cross-env will take care of setting it properly.
+
+Links:
+
+  - Official documentation could be found at [npmjs.com/package/cross-env](https://www.npmjs.com/package/cross-env)
