@@ -114,14 +114,20 @@ Container connects Component with Store. Component only knows how to displays da
       constructor(props) {
         super(props);
 
-        // request for data on Component load
-        this.componentDidMount = function componentDidMount() {
-          const { fetchVehicles } = this.props;
+        // React autobinding pattern
+        this.onSubmit = this.onSubmit.bind(this);
+      }
 
-          // Populate list with data on page load;
-          // dispatch an action to Saga
-          fetchVehicles();
-        };
+      componentDidMount() {
+        const { fetchVehicles } = this.props;
+
+        // Populate list with data on page load;
+        // dispatch an action to Saga
+        fetchVehicles();
+      }
+
+      onSubmit() {
+        // do something
       }
 
       render() {
@@ -129,6 +135,10 @@ Container connects Component with Store. Component only knows how to displays da
           <article className="vehicles-wrapper">
             <h1>Star Wars vehicles dictionary</h1>
             <List {...this.props} />
+
+            <button type="button" onClick={this.onSubmit}>
+              Submit
+            </button>
           </article>
         );
       }
