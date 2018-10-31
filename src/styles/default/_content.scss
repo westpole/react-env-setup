@@ -1,0 +1,19 @@
+h1 {
+  color: #221a1a;
+  font-size: 3em;
+  font-family: 'Poller One', sans-serif;
+  padding-bottom: 1em;
+}
+
+.message {
+  border: solid 2px #423040;
+  border-radius: 5px;
+  padding: 2em 3em;
+  font-size: 1.1em;
+  background-color: #c7645f;
+
+  &.error {
+    border: solid 2px #423040;
+    background-color: #e03c54;
+  }
+}

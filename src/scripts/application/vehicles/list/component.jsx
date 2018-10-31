@@ -2,6 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuidv4 from 'uuid/v4';
 
+const columnHeaderList = {
+  name: 'Name',
+  cargo_capacity: 'Cargo capacity',
+  passengers: 'Passengers',
+  vehicle_class: 'Vehicle class',
+  cost_in_credits: 'Cost in credits',
+};
+
+const enabledColumnList = [
+  'name',
+  'cargo_capacity', 'passengers',
+  'vehicle_class', 'cost_in_credits',
+];
+
 /**
  * Format data output
  *
@@ -10,17 +24,23 @@ import uuidv4 from 'uuid/v4';
  * @returns {object}      vehicle entity DOM representation
  */
 function generateList(item) {
-  const dataList = [
-    'name',
-    'cargo_capacity', 'passengers',
-    'vehicle_class', 'cost_in_credits',
-  ];
-
   return (
-    <section className="vehicle-entity" key={uuidv4()}>
-      {dataList.map(key => (
-        <div data-type={key} key={uuidv4()}>
+    <section className="row" key={uuidv4()}>
+      {enabledColumnList.map(key => (
+        <div className="cell" data-type={key} key={uuidv4()}>
           {item[key]}
+        </div>
+      ))}
+    </section>
+  );
+}
+
+function generateListHeader() {
+  return (
+    <section className="header">
+      {enabledColumnList.map(key => (
+        <div className="cell" key={uuidv4()}>
+          {columnHeaderList[key]}
         </div>
       ))}
     </section>
@@ -40,14 +60,15 @@ class Component extends React.PureComponent {
 
     if (error.message) {
       return (
-        <article className="vehicle-list error">
+        <article className="message error">
           {error.message}
         </article>
       );
     }
 
     return (
-      <article className="vehicle-list">
+      <article className="table">
+        {generateListHeader()}
         {vehicles.map(generateList)}
       </article>
     );

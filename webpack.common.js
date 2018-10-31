@@ -26,7 +26,26 @@ module.exports = {
         }
       },
       {
-        test: /\.svg$/,
+        test: /\.(pdf|jpg|png|gif|ico)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ]
+      },
+      {
+        test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 50000,
+            mimetype: 'application/font-woff',
+            name: './fonts/[name].[ext]'
+          }
+        }]
+      },
+      {
+        test: /images\/(.*?)\.svg$/,
         use: [
           {
             loader: "babel-loader"
@@ -40,21 +59,24 @@ module.exports = {
         ]
       },
       {
-        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
-        use: [
-          {
-            loader: 'url-loader'
-          }
-        ]
-      },
-      {
         test: /\.scss$/,
         use: [
           (process.env.NODE_ENV !== 'production')
             ? 'style-loader'
             : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: (process.env.NODE_ENV !== 'production') ? true : false,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: (process.env.NODE_ENV !== 'production') ? true : false
+            }
+          }
         ]
       }
     ]

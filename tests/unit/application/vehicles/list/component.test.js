@@ -3,6 +3,8 @@ import toJson from 'enzyme-to-json';
 import Component from '../../../../../src/scripts/application/vehicles/list/component.jsx';
 import { mockComponent } from '../../../../tools/mock-component.jsx';
 
+jest.mock('uuid/v4', () => () => 1);
+
 describe('Application/Vehicles/List/Component', () => {
   it('should match saved snapshot', () => {
     const wrapper = mockComponent({
@@ -37,7 +39,7 @@ describe('Application/Vehicles/List/Component', () => {
 
     const list = [];
 
-    expect(wrapper.find('.vehicle-entity').length).toEqual(1);
+    expect(wrapper.find('.row').length).toEqual(1);
     expect(wrapper.find('div[data-type]').length).toEqual(5);
 
     wrapper.find('div[data-type]').forEach((node) => {

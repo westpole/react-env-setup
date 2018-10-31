@@ -124,7 +124,7 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 - [ ] Add React router
 
-- [ ] setup autoprefixer for CSS
+- [ ] setup autoprefixer for CSS (https://github.com/postcss/autoprefixer)
 
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
 
@@ -132,14 +132,16 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 - [ ] check how webpack reloads if URL contain other than root path (set publickPath to '/*' to fix issue)
 
-- [ ] investigate react-vistualized
+- [ ] investigate react-vistualized (https://www.npmjs.com/package/react-virtualized)
 
-- [ ] Add react international package
+- [ ] Add react international package: [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) and [React A11y](https://www.npmjs.com/package/react-a11y)
 
 - [ ] use local-storage service (code base) to save UI user settings
 
-- [ ] add integration
+- [ ] add integration tests
 
 - [ ] add e2e tests
 
 - [ ] Set script to prepare app for a release
+
+- [ ] Add description on how to handle DOM event listeners in Components

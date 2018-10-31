@@ -2,9 +2,11 @@
 
 exports[`Application/Vehicles/Component should match saved snapshot 1`] = `
 <article
-  className="vehicles-wrapper"
+  className="page wrapper"
 >
-  <h1>
+  <h1
+    className="page title"
+  >
     Star Wars vehicles dictionary
   </h1>
   <Connect(Component)

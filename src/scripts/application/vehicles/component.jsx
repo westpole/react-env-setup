@@ -36,8 +36,8 @@ class VehiclesComponent extends React.Component {
 
   render() {
     return (
-      <article className="vehicles-wrapper">
-        <h1>Star Wars vehicles dictionary</h1>
+      <article className="page wrapper">
+        <h1 className="page title">Star Wars vehicles dictionary</h1>
         <List {...this.props} />
       </article>
     );
