@@ -1,19 +1,18 @@
 h1 {
-  color: #221a1a;
+  color: $maastricht-blue;
   font-size: 3em;
-  font-family: 'Poller One', sans-serif;
+  font-family: $starwars-font;
   padding-bottom: 1em;
 }
 
 .message {
-  border: solid 2px #423040;
+  border: solid 2px $maastricht-blue;
   border-radius: 5px;
   padding: 2em 3em;
   font-size: 1.1em;
-  background-color: #c7645f;
+  background-color: $maximum-blue-green;
 
   &.error {
-    border: solid 2px #423040;
-    background-color: #e03c54;
+    background-color: $rose-madder;
   }
 }
