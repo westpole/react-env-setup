@@ -66,10 +66,12 @@ Package list:
   - `autoprefixer` (Adds vendor prefixes for new or experimental CSS rules)
   - `postcss-loader` (Runs autoprefixer agains CSS files)
   - `postcss-import` (Resolves @import path for "postcss-loader")
+  - `webpack-bundle-analyzer` (Visualize size of webpack output files with an interactive zoomable treemap)
 
 Links:
 
   - Official documentation could be found at [webpack.js.org](https://webpack.js.org/concepts/)
+  - [Monitor and analyze the app](https://developers.google.com/web/fundamentals/performance/webpack/monitor-and-analyze#analyze_why_the_bundle_is_so_large)
 
 ## Babel
 
