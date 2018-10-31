@@ -1,7 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: [
@@ -57,27 +56,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          (process.env.NODE_ENV !== 'production')
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: (process.env.NODE_ENV !== 'production') ? true : false,
-              importLoaders: 1
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: (process.env.NODE_ENV !== 'production') ? true : false
-            }
-          }
-        ]
       }
     ]
   },
@@ -86,10 +64,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + '/src/index.html',
       favicon: __dirname + '/src/assets/images/favicon.ico',
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
     })
   ],
   output: {

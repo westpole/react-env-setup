@@ -63,6 +63,9 @@ Package list:
   - `style-loader` (Adds CSS to the DOM by injecting a style tag)
   - `node-sass` (It allows you to natively compile .scss files to css at incredible speed and automatically via a connect middleware)
   - `url-loader` (A loader for webpack which transforms files into base64 URIs. Useful for any media content on page)
+  - `autoprefixer` (Adds vendor prefixes for new or experimental CSS rules)
+  - `postcss-loader` (Runs autoprefixer agains CSS files)
+  - `postcss-import` (Resolves @import path for "postcss-loader")
 
 Links:
 

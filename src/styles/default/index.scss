@@ -4,9 +4,9 @@
 
 @import url("_reset.css");
 
-@import "vars";
-@import "main";
-@import "content";
-@import "table";
-@import "pager";
-@import "footer";
+@import "_vars.scss";
+@import "_main.scss";
+@import "_content.scss";
+@import "_table.scss";
+@import "_pager.scss";
+@import "_footer.scss";

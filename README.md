@@ -120,11 +120,13 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 ## Known issues
 
+#### No vendor prefixes in CSS
+
+In order to have them in your code base, you should have `.browserlistrc` in your root. Read more about it [in official docs](https://github.com/browserslist/browserslist#best-practices).
+
 ## TODO
 
 - [ ] Add React router
-
-- [ ] setup autoprefixer for CSS (https://github.com/postcss/autoprefixer)
 
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
 

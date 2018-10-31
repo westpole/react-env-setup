@@ -17,5 +17,40 @@ module.exports = merge(common, {
   },
   output: {
     publicPath: '/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              sourceMap: true,
+              plugins: (loader) => [
+                require('postcss-import')({ root: loader.resourcePath }),
+                require('precss')(),
+                require('autoprefixer')()
+              ]
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
+    ]
   }
 });
