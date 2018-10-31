@@ -120,9 +120,19 @@ You should create an **Issue**. More on how to do it on [github help](https://he
 
 ## Known issues
 
-#### No vendor prefixes in CSS
+##### No vendor prefixes in CSS
 
 In order to have them in your code base, you should have `.browserlistrc` in your root. Read more about it [in official docs](https://github.com/browserslist/browserslist#best-practices).
+
+##### Postcss-loader
+
+This module resolves all relative paths from style root folder (from an entry point).
+
+    @example:
+    ./src/styles/default/style.scss
+    ./src/assets/fonts/myfont.woff2
+
+    you should specify path in style.scss as `../assets/fonts/myfont.woff2`
 
 ## TODO
 
@@ -143,7 +153,5 @@ In order to have them in your code base, you should have `.browserlistrc` in you
 - [ ] add integration tests
 
 - [ ] add e2e tests
-
-- [ ] Set script to prepare app for a release
 
 - [ ] Add description on how to handle DOM event listeners in Components

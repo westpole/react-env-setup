@@ -1,3 +1,13 @@
+/**
+ * Postcss-loader module resolves all relative paths from style root folder.
+ *
+ * @example:
+ *    ./src/styles/default/style.scss
+ *    ./src/assets/fonts/myfont.woff2
+ *
+ *    path should be `../assets/fonts/myfont.woff2`
+ */
+
 @font-face {
   font-family: 'Poller One';
   src: url('../assets/fonts/poller-one/PollerOne-Regular.woff2') format('woff2'),
