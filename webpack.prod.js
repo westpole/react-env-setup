@@ -41,7 +41,8 @@ module.exports = merge(common, {
               plugins: (loader) => [
                 require('postcss-import')({ root: loader.resourcePath }),
                 require('precss')(),
-                require('autoprefixer')()
+                require('autoprefixer')(),
+                require('cssnano')({ autoprefixer: false })
               ]
             }
           },
