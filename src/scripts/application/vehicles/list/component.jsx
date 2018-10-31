@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuidv4 from 'uuid/v4';
 
+/**
+ * Map table column headers ids to their labels
+ *
+ * @type {Object}
+ */
 const columnHeaderList = {
   name: 'Name',
   cargo_capacity: 'Cargo capacity',
@@ -10,6 +15,11 @@ const columnHeaderList = {
   cost_in_credits: 'Cost in credits',
 };
 
+/**
+ * List of enabled table columns data
+ *
+ * @type {Array}
+ */
 const enabledColumnList = [
   'name',
   'cargo_capacity', 'passengers',
@@ -35,6 +45,11 @@ function generateList(item) {
   );
 }
 
+/**
+ * Generate table list header
+ *
+ * @returns {object} table header DOM representation
+ */
 function generateListHeader() {
   return (
     <section className="header">

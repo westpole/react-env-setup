@@ -11,14 +11,16 @@ import logManager from '../../config/log-manager';
  * @returns {array}            new updated state
  */
 function logData(type, prevState, newState) {
-  logManager.outputLog(
-    'state',
-    type,
-    [
-      prevState,
-      newState,
-    ],
-  );
+  if (process.env.NODE_ENV !== 'production') {
+    logManager.outputLog(
+      'state',
+      type,
+      [
+        prevState,
+        newState,
+      ],
+    );
+  }
 
   return newState;
 }
