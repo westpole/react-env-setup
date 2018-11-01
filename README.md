@@ -3,6 +3,17 @@
 This is a proposal on how to setup project.
 If you would like to get more information on what package was included and what was the reason, then [visit PACKAGE_INFO file](documentation/PACKAGE_INFO.md)
 
+## Table of contents
+
+  * [Example project](#example-project)
+  * [How to setup](#how-to-setup)
+  * [Development phase](#development-phase)
+  * [How to commit any changes to GIT repository](#how-to-commit-any-changes-to-GIT-repository)
+  * [How to contribute](#how-to-contribute)
+  * [How to report a bug](#how-to-report-a-bug)
+  * [Known issues](#known-issues)
+  * [TODO](#TODO)
+
 ## Example project
 
 Project's requirements are [here](documentation/PROJECT_REQUIREMENTS.md)
@@ -21,7 +32,7 @@ You can also run check manually:
 
     npm run lint
 
-## How to setup?
+## How to setup
 
 Firstly, you should clone git repository into your local environment (desktop, laptop, etc.).
 
@@ -74,7 +85,7 @@ TODO list should be checked by PM or team lead to keep project healthy.
 
 You could check current [TODO list status](TODO.md)
 
-## How to commit any changes to GIT repository?
+## How to commit any changes to GIT repository
 
 This project uses `conventional-changelog` module to generate a changelog from git metadata.
 
@@ -104,7 +115,7 @@ This project uses `conventional-changelog` module to generate a changelog from g
 
 For more details on how to construct commit message see at [ESLint Convention](documentation/COMMIT_RULES.md).
 
-## How to contribute?
+## How to contribute
 
 Firstly, you should set a working copy on your localhost.
 Secondly, create a feature/bug branch from the origin source.
@@ -114,7 +125,7 @@ Check out `commit message format` requirements in `documentation/COMMIT_RULES.md
 
 And the final step is to create a PR.
 
-## How to report a bug?
+## How to report a bug
 
 You should create an **Issue**. More on how to do it on [github help](https://help.github.com/articles/creating-an-issue/).
 
