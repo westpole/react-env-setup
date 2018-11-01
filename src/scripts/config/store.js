@@ -21,16 +21,14 @@
  *      size: <how many items per page>,
  *    },
  *    selected: [ list of item.id ],
- *    error: [
- *      {
+ *    error: {
  *        type: <component name>, // each Component has a "#name" tag in their comment section
  *        message: <user friendly message>,
  *        details: {
  *          where: <scope id>,
  *          message: <original response>,
  *        },
- *      },
- *    ],
+ *     },
  *  }
  */
 

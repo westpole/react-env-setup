@@ -11,6 +11,14 @@ const initialState = {
   error: {},
 };
 
+/**
+ * Vehicles data reducer
+ *
+ * @param   {Array}  state  current data state
+ * @param   {Object} action event data
+ *
+ * @returns {Array}         new data state
+ */
 const vehicles = (state = initialState.vehicles, action) => {
   // each reducer is mapped as <event name>: <reducer fn>
   const handlers = {
@@ -22,6 +30,14 @@ const vehicles = (state = initialState.vehicles, action) => {
     : state;
 };
 
+/**
+ * Error data reducer
+ *
+ * @param   {Object} state  current error state
+ * @param   {Object} action event data
+ *
+ * @returns {Object}        new error state
+ */
 const error = (state = initialState.error, action) => {
   const handlers = {
     [CONSTANTS.ERROR_SERVER_LIST]: errorMap,

@@ -25,6 +25,14 @@ function logData(type, prevState, newState) {
   return newState;
 }
 
+/**
+ * Vehicle data state updater
+ *
+ * @param   {Array}  state  previous data state
+ * @param   {Object} action event data
+ *
+ * @returns {Array}         new data state
+ */
 export default function vehicleReducer(state, action) {
   switch (action.type) {
     case CONSTANTS.FETCH_SUCCESS:

@@ -5,6 +5,13 @@
 
 import logManager from './log-manager';
 
+/**
+ * Load user config from localStorage
+ *
+ * @param   {string} user id value
+ *
+ * @returns {object}      user config
+ */
 export const loadState = (user) => {
   try {
     const serializedState = localStorage.getItem(user);
@@ -28,6 +35,14 @@ export const loadState = (user) => {
   }
 };
 
+/**
+ * Insert user config into localStorage
+ *
+ * @param   {string}  user   id value
+ * @param   {object}  config user config
+ *
+ * @returns {boolean}        operation status
+ */
 export const saveState = (user, config) => {
   try {
     localStorage.setItem(user, JSON.stringify(config));
