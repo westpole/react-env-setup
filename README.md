@@ -147,6 +147,8 @@ This module resolves all relative paths from style root folder (from an entry po
 
 ## TODO
 
+- [ ] Replace example with the one from Full Stack Challenge
+
 - [ ] Add React router
 
 - [ ] add Size limit module for production (https://github.com/ai/size-limit?utm_source=CSS-Weekly&utm_campaign=Issue-286&utm_medium=email)
