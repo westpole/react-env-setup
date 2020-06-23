@@ -1,35 +1,37 @@
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/scripts/index.jsx'
+    './src/scripts/index.tsx',
   ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      Assets: path.resolve(__dirname, 'src/assets/'),
+      Store: path.resolve(__dirname, 'src/scripts/store/'),
+      Services: path.resolve(__dirname, 'src/scripts/services/'),
+      Config: path.resolve(__dirname, 'src/scripts/config/'),
+      Root: path.resolve(__dirname, 'src/scripts/application/'),
+    },
+  },
   module: {
     rules: [
       {
-        test: /\.jsx?/,
-        exclude: [
-          /node_modules/,
-          /src\/.*?\/__tests__/
-        ],
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env'
-            ]
-          }
-        }
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.(pdf|jpg|png|gif|ico)$/,
         use: [
           {
-            loader: 'url-loader'
-          }
-        ]
+            loader: 'url-loader',
+          },
+        ],
       },
       {
         test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/,
@@ -38,35 +40,21 @@ module.exports = {
           options: {
             limit: 50000,
             mimetype: 'application/font-woff',
-            name: './fonts/[name].[ext]'
-          }
-        }]
-      },
-      {
-        test: /images\/(.*?)\.svg$/,
-        use: [
-          {
-            loader: "babel-loader"
+            name: './fonts/[name].[ext]',
           },
-          {
-            loader: "react-svg-loader",
-            options: {
-              jsx: true
-            }
-          }
-        ]
-      }
-    ]
+        }],
+      },
+    ],
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.html',
-      favicon: __dirname + '/src/assets/images/favicon.ico',
-    })
+      template: path.join(__dirname, '/src/index.html'),
+      favicon: path.join(__dirname, '/src/assets/images/favicon.ico'),
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    path: path.resolve(__dirname, 'dist'),
+  },
 };

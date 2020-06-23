@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "Assets/*": ["assets/*"],
+      "Store/*": ["scripts/store/*"],
+      "Services/*": ["scripts/services/*"],
+      "Config/*": ["scripts/config/*"],
+      "Root/*": ["scripts/application/*"],
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "cypress",
+    "reports",
+    "*.js"
+  ]
+}
