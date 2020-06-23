@@ -6,13 +6,13 @@
   "scripts": {
     "lint": "eslint src/scripts/** --ext .jsx,.js --color",
     "lint-test": "eslint tests/** --ext .js --color",
-    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0",
+    "changelog": "conventional-changelog -p eslint -i reports/CHANGELOG.md -s -r 0",
     "start": "npm run lint && webpack-dev-server --open --config webpack.dev.js",
     "test": "cross-env NODE_ENV=test npm run lint-test && jest --color",
     "tdd": "cross-env NODE_ENV=test npm run lint-test && jest --color --watchAll",
     "snapshot-update": "jest -u --color",
     "todo": "leasot --exit-nicely src/scripts/**/*.js src/scripts/**/*.jsx",
-    "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.js src/scripts/**/*.jsx > TODO.md",
+    "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.js src/scripts/**/*.jsx > reports/TODO.md",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [

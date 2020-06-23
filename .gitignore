@@ -1,3 +1,11 @@
+# Packages folder
 node_modules
+
+# Dynamically created folders
 dist
 coverage
+
+# Reports
+reports/*
+!reports/TODO.md
+!reports/CHANGELOG.md

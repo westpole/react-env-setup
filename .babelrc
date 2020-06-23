@@ -11,6 +11,16 @@
   },
   "plugins": [
     "@babel/plugin-transform-regenerator",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-dynamic-import",
+    ["module-resolver", {
+      "alias": {
+        "Assets": "./src/assets",
+        "Store": "./src/scripts/store",
+        "Services": "./src/scripts/services",
+        "Config": "./src/scripts/config",
+        "Root": "./src/scripts/application"
+      }
+    }]
   ]
 }
