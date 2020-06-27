@@ -7,9 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../styles/index.scss';
-
-import App from './application/app.jsx';
+import App from 'Root/app';
 
 ReactDOM.render(
   <App />,
