@@ -15,8 +15,8 @@
     }
   },
   "extends": [
-    "eslint:recommended",
-    "airbnb"
+    "airbnb",
+    "airbnb/hooks"
   ],
   "settings": {
     "react": {
@@ -36,6 +36,13 @@
         "jsx": "never"
       }
     ],
-    "react/jsx-wrap-multilines": 0
+    "react/jsx-wrap-multilines": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".ts", ".tsx"] }]
   }
 }
