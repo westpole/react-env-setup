@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactChild;
 }
 
-export function Store({ children }: Props) {
+export default function Store({ children }: Props) {
   return (
     <Provider store={store}>
       {children}

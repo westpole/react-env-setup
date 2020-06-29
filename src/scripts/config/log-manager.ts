@@ -1,5 +1,4 @@
 import { ObjectAnnotation } from 'Config/types';
-import { Store } from 'Store/types';
 
 const outputColorScheme: ObjectAnnotation = {
   action: 'color: blue',
@@ -63,16 +62,16 @@ export function extendDispatch(rawDispatch: Function): Function {
     // return action object to the store
     return rawDispatch(action);
   };
-};
+}
 
 /**
  * Log new state
  */
 export function logStateChange(
   type: string,
-  prevState: Store,
-  newState: Store
-): Store {
+  prevState: {},
+  newState: {},
+) {
   if (process.env.NODE_ENV !== 'production') {
     outputLog(
       'state',

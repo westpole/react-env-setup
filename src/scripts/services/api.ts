@@ -7,6 +7,6 @@ export default {
    * Fetch data from remote repository
    */
   async fetch(url: string): Promise<any> {
-    return fetch(url).then(response => response.json());
+    return fetch(url).then((response) => response.json());
   },
 };

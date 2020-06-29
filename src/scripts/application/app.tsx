@@ -1,5 +1,5 @@
 import React from 'react';
-import { Store } from 'Store/index';
+import Store from 'Store/index';
 
 function App() {
   return (
@@ -7,6 +7,6 @@ function App() {
       Home page
     </Store>
   );
-};
+}
 
 export default App;
