@@ -8,3 +8,6 @@ coverage
 # Reports
 reports/*
 !reports/CHANGELOG.md
+
+# Specific local dev files
+roadmap.md
