@@ -7,5 +7,4 @@ coverage
 
 # Reports
 reports/*
-!reports/TODO.md
 !reports/CHANGELOG.md
