@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux';
 import { Action } from 'Store/actions';
+import { AppStore } from 'Store/types';
 
-interface Store {
+const initState: AppStore = {
   notification: {
-    message: string | undefined;
-    reason: string | undefined;
-  };
-}
+    message: '',
+    reason: '',
+  },
+};
 
-function addMessage(state: Store, action: Action): Store {
+function addMessage(state: AppStore = initState, action: Action): AppStore {
   switch (action.type) {
     case 'SHOW_MESSAGE': {
       return {

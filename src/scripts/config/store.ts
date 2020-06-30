@@ -2,8 +2,8 @@
  * Store configuration.
  * This one is implemented with Redux library.
  *
- * Redux official documentatino:
- * @see https://redux.js.org/basics/usagewithreact
+ * Redux official documentation:
+ * @see https://react-redux.js.org/introduction/basic-tutorial
  */
 
 import { createStore } from 'redux';
