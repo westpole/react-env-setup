@@ -14,7 +14,7 @@ const outputColorScheme: ObjectAnnotation = {
  * Also it polutes test runner output.
  */
 /* istanbul ignore next */
-export function outputLog(id: string, type: string, info: any[]) {
+export default function outputLog(id: string, type: string, info: any[]) {
   /* eslint-disable no-console */
 
   if (process.env.NODE_ENV === 'test') {
@@ -50,38 +50,4 @@ export function outputLog(id: string, type: string, info: any[]) {
   console.groupEnd();
 
   /* eslint-enable no-console */
-}
-
-/**
- * Log data that goes throught store.dispatch
- */
-export function extendDispatch(rawDispatch: Function): Function {
-  return (action: ObjectAnnotation) => {
-    outputLog('action', action.type, [action]);
-
-    // return action object to the store
-    return rawDispatch(action);
-  };
-}
-
-/**
- * Log new state
- */
-export function logStateChange(
-  type: string,
-  prevState: {},
-  newState: {},
-) {
-  if (process.env.NODE_ENV !== 'production') {
-    outputLog(
-      'state',
-      type,
-      [
-        prevState,
-        newState,
-      ],
-    );
-  }
-
-  return newState;
 }

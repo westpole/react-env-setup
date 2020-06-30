@@ -3,7 +3,7 @@
  * No user personal or account infromation should be here.
  */
 
-import { outputLog } from 'Config/log-manager';
+import outputLog from 'Config/log-manager';
 import { ObjectAnnotation } from 'Config/types';
 
 /**
