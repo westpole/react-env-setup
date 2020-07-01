@@ -6,7 +6,8 @@
     "jest": true
   },
   "plugins": [
-    "react"
+    "react",
+    "testing-library"
   ],
   "parserOptions": {
     "ecmaFeatures": {
