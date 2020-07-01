@@ -1,43 +1,44 @@
 module.exports = {
-  verbose: true,
+  testRegex: 'spec\\.(tsx?|jsx?)$',
   transform: {
-    '^.+\\.jsx?$': 'babel-jest'
+    '^.+\\.(t|j)sx?$': 'ts-jest',
   },
-  testMatch: [
-    '**/?(*.)+(spec|test).js?(x)'
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/tools/',
   ],
-  roots: [
-    '<rootDir>/tests/unit/'
-  ],
+  setupFiles: ['<rootDir>/__mocks__/browserMocks.js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
   collectCoverage: true,
-  coverageReporters: [
-    'html',
-    'lcov'
-  ],
+  coverageDirectory: './reports/coverage',
+  coverageReporters: ['html', 'lcov'],
   collectCoverageFrom: [
-    '**/*.{js,jsx}',
-    '!**/src/scripts/index.jsx',
-    '!enzyme.config.js',
-    '!jest.config.js',
-    '!webpack.common.js',
-    '!webpack.dev.js',
-    '!webpack.prod.js',
-    '!**/coverage/**',
-    '!**/assets/**',
-    '!**/documentation/**',
+    'src/**/*.{ts,tsx}',
     '!**/node_modules/**',
-    '!**/tests/tools/**'
+    '!tools/**',
   ],
-  setupTestFrameworkScriptFile: './enzyme.config.js',
   coverageThreshold: {
     global: {
       branches: 80,
       functions: 80,
       lines: 80,
-      statements: -10
-    }
+      statements: -10,
+    },
+  },
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.jest.json',
+      babelConfig: {
+        presets: ['@babel/env'],
+      },
+    },
   },
   moduleNameMapper: {
-    '\\.scss$': 'identity-obj-proxy'
-  }
+    '\\.scss$': 'identity-obj-proxy',
+    'Root(.*)$': '<rootDir>/src/application/$1',
+    'Assets(.*)$': '<rootDir>/src/assets/$1',
+    'Store(.*)$': '<rootDir>/src/store/$1',
+    'Config(.*)$': '<rootDir>/src/config/$1',
+    'Services(.*)$': '<rootDir>/src/services/$1',
+  },
 };

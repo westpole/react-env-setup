@@ -1,11 +1,11 @@
-import Api from '../../../src/scripts/services/api';
+import Api from 'Services/api';
 
-describe('Services/Api', () => {
+describe('Services: Api', () => {
   describe('Fetch', () => {
     it('should return a response object', () => {
       window.fetch = jest
         .fn()
-        .mockImplementation(url => Promise.resolve({
+        .mockImplementation((url: string) => Promise.resolve({
           json() {
             return { result: url };
           },
