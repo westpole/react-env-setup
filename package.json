@@ -21,11 +21,11 @@
     "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.ts src/scripts/**/*.tsx > reports/TODO.md",
     "prebuild": "npm run lint:report && npm test",
     "build": "webpack --config webpack.prod.js",
-    "postbuild": "npm run changelog && git:commit && npm run git:push",
+    "postbuild": "npm run changelog && npm run git:commit && npm run git:push",
     "release:major": "npm version major",
     "release:minor": "npm version minor",
     "release:patch": "npm version patch",
-    "postversion": "npm run changelog && git:commit && npm run git:push",
+    "postversion": "npm run changelog && npm run git:commit && npm run git:push",
     "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js"
   },
   "keywords": [
