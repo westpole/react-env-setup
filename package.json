@@ -10,7 +10,7 @@
     "lint:test": "eslint src/scripts/**/*.spec* --ext .ts --color",
     "commit": "git-cz",
     "git:commit": "git add . && git commit -m \"build: bump up to a new version\"",
-    "git:push": "git push origin && git push origin --tags",
+    "git:push": "git push origin master && git push origin --tags",
     "changelog": "conventional-changelog -p eslint -i reports/CHANGELOG.md -s -r 0",
     "prestart": "npm run lint",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --config webpack.dev.js",
