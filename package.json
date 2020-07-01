@@ -19,7 +19,7 @@
     "snapshot-update": "jest -u --color",
     "todo": "leasot --exit-nicely src/scripts/**/*.ts src/scripts/**/*.tsx",
     "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.ts src/scripts/**/*.tsx > reports/TODO.md",
-    "prebuild": "npm run lint:report",
+    "prebuild": "npm run lint:report && npm test",
     "build": "webpack --config webpack.prod.js",
     "release:major": "npm version major",
     "release:minor": "npm version minor",
@@ -42,7 +42,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "npm run lint && npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
