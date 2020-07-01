@@ -1,5 +1,8 @@
 # Setup React application.
 
+[![Coverage Status](https://coveralls.io/repos/github/westpole/react-env-setup/badge.svg?branch=master)](https://coveralls.io/github/westpole/react-env-setup?branch=master)
+[![Build Status](https://travis-ci.org/westpole/react-env-setup.svg?branch=master)](https://travis-ci.org/westpole/react-env-setup)
+
 This is a proposal on how to setup project.
 If you would like to get more information on what package was included and what was the reason, then [visit PACKAGE_INFO file](documentation/PACKAGE_INFO.md)
 
