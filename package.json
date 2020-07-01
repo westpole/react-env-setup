@@ -4,6 +4,14 @@
   "description": "This is a blueprint for React application.",
   "author": "Stanislav Spuzyak",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/westpole/react-env-setup"
+  },
+  "homepage": "https://github.com/westpole/react-env-setup#readme",
+  "bugs": {
+    "url": "https://github.com/westpole/react-env-setup/issues"
+  },
   "scripts": {
     "lint": "eslint src/scripts/** --ext .tsx,.ts --color",
     "lint:report": "eslint src/scripts/** --ext .tsx,.ts --color --format=json -o ./reports/eslint.json",
