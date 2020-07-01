@@ -1,5 +1,4 @@
 module.exports = {
-  testRegex: 'spec\\.(tsx?|jsx?)$',
   transform: {
     '^.+\\.(t|j)sx?$': 'ts-jest',
   },
@@ -13,7 +12,7 @@ module.exports = {
   coverageDirectory: './reports/coverage',
   coverageReporters: ['html', 'lcov'],
   collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
+    'src/scripts/**/*.{ts,tsx}',
     '!**/node_modules/**',
     '!tools/**',
   ],
