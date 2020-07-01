@@ -7,13 +7,8 @@ cache:
 script:
   - npm install
   - npm run build
+  - cat ./reports/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 deploy:
   project: ./dist/
 on:
   branch: master
-
-jobs:
-  include:
-    - stage: Produce Coverage
-      node_js: node
-      script: cat ./reports/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
