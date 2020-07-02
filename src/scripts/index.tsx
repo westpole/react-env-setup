@@ -7,7 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from 'Root/App';
+import App from 'Root/application/App';
 
 ReactDOM.render(
   <App />,

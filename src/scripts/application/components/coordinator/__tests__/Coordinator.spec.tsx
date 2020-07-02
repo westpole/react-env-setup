@@ -9,7 +9,7 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 import { initState } from 'Store/reducers';
-import Coordinator from 'Root/components/coordinator';
+import Coordinator from 'Components/coordinator';
 
 describe('Components: Coordinator', () => {
   const mockStore = configureStore([]);

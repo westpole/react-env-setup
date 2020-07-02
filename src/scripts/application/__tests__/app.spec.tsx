@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from 'Root/App';
+import App from 'Root/application/App';
 
 describe('Application: main wrapper', () => {
   it('should render Application component', async () => {

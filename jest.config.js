@@ -34,7 +34,8 @@ module.exports = {
   },
   moduleNameMapper: {
     '\\.scss$': 'identity-obj-proxy',
-    'Root(.*)$': '<rootDir>/src/scripts/application/$1',
+    'Root(.*)$': '<rootDir>/src/scripts/$1',
+    'Components(.*)$': '<rootDir>/src/scripts/application/components/$1',
     'Assets(.*)$': '<rootDir>/src/scripts/assets/$1',
     'Store(.*)$': '<rootDir>/src/scripts/store/$1',
     'Config(.*)$': '<rootDir>/src/scripts/config/$1',

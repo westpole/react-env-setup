@@ -1,6 +1,6 @@
 import React from 'react';
 import Store from 'Store/index';
-import Coordinator from 'Root/components/coordinator';
+import Coordinator from 'Components/coordinator';
 
 function App() {
   return (

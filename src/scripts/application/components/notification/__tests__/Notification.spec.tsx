@@ -7,7 +7,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { initState } from 'Store/reducers';
-import Notification from 'Root/components/notification/Notification';
+import Notification from 'Components/notification/Notification';
 
 describe('Components: Notification', () => {
   it('should not display message by default', async () => {

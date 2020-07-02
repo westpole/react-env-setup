@@ -1,5 +1,5 @@
 import React from 'react';
-import Notification from 'Root/components/notification';
+import Notification from 'Components/notification';
 
 interface Props {
   greetings: Function;
