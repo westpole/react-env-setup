@@ -24,6 +24,6 @@ jobs:
 
     - name: Run build scripts
       run: |
-        npm ci,
-        npm run build,
+        npm ci
+        npm run build
         cat ./reports/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
