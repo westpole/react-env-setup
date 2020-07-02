@@ -30,7 +30,7 @@
     "snapshot-update": "jest -u --color",
     "todo": "leasot --exit-nicely src/scripts/**/*.ts src/scripts/**/*.tsx",
     "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.ts src/scripts/**/*.tsx > reports/TODO.md",
-    "prebuild": "npm run report:clear && npm run lint:report && npm test",
+    "prebuild": "npm run report:clear && npm run lint && npm test",
     "build": "webpack --config webpack.prod.js",
     "postbuild": "npm run changelog",
     "release:major": "npm version major",
