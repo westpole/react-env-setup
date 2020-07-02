@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { Action } from 'Store/actions';
-import { AppStore } from 'Store/types';
+import { NotificationType, AppStore } from 'Store/types';
 
 export const initState: AppStore = {
   notification: {
@@ -9,18 +9,15 @@ export const initState: AppStore = {
   },
 };
 
-export function addMessage(
-  state: AppStore = initState,
+export function notification(
+  state: NotificationType = initState.notification,
   action: Action,
-): AppStore {
+): NotificationType {
   switch (action.type) {
     case 'SHOW_MESSAGE': {
       return {
-        ...state,
-        notification: {
-          message: action.dataText,
-          reason: action.reason,
-        },
+        message: action.dataText,
+        reason: action.reason,
       };
     }
 
@@ -31,7 +28,7 @@ export function addMessage(
 }
 
 const rootReducer = combineReducers({
-  addMessage,
+  notification,
 });
 
 export default rootReducer;

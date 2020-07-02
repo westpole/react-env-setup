@@ -3,36 +3,30 @@
  * @see https://redux.js.org/recipes/writing-tests#reducers
  */
 
-import { addMessage, initState } from 'Store/reducers';
+import { notification, initState } from 'Store/reducers';
 
 describe('Store: Reducers', () => {
-  describe('addMessage reducer', () => {
+  describe('notification reducer', () => {
     it(
       'should return an initial state if no state and action type provided',
       () => {
-        expect(addMessage(undefined, { type: 'NONE' })).toEqual(initState);
+        expect(notification(undefined, { type: 'NONE' })).toEqual(initState);
       },
     );
 
     it('should return specified state if no action type provided', () => {
       const newState = {
-        ...initState,
-        notification: {
-          message: 'initial message',
-          reason: 'test',
-        },
+        message: 'initial message',
+        reason: 'test',
       };
 
-      expect(addMessage(newState, { type: 'NONE' })).toEqual(newState);
+      expect(notification(newState, { type: 'NONE' })).toEqual(newState);
     });
 
     it('should return specified state if no action type provided', () => {
       const newState = {
-        ...initState,
-        notification: {
-          message: 'another message',
-          reason: 'test',
-        },
+        message: 'another message',
+        reason: 'test',
       };
       const action = {
         type: 'SHOW_MESSAGE',
@@ -40,7 +34,7 @@ describe('Store: Reducers', () => {
         reason: 'test',
       };
 
-      expect(addMessage(initState, action)).toEqual(newState);
+      expect(notification(initState.notification, action)).toEqual(newState);
     });
   });
 });
