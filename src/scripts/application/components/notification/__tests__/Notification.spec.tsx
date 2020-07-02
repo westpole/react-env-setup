@@ -6,12 +6,31 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
-import Notification from 'Root/components/notification';
+import { initState } from 'Store/reducers';
+import Notification from 'Root/components/notification/Notification';
 
 describe('Components: Notification', () => {
-  it('should render component', async () => {
-    const { queryAllByText } = render(<Notification />);
+  it('should not display message by default', async () => {
+    const { queryAllByTestId } = render(
+      <Notification notification={initState.notification} />,
+    );
 
-    expect(queryAllByText('Notification message').length).toEqual(1);
+    expect(queryAllByTestId('notification').length).toEqual(0);
+  });
+
+  it('should not display message by default', async () => {
+    const notifyMe = {
+      message: 'Test message',
+      reason: 'Just say Hi',
+    };
+
+    const { queryAllByTestId, queryAllByText } = render(
+      <Notification notification={notifyMe} />,
+    );
+
+    expect(queryAllByTestId('notification').length).toEqual(1);
+
+    expect(queryAllByText('Test message').length).toEqual(1);
+    expect(queryAllByText('reason: Just say Hi').length).toEqual(1);
   });
 });

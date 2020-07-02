@@ -10,7 +10,8 @@ describe('Store: Reducers', () => {
     it(
       'should return an initial state if no state and action type provided',
       () => {
-        expect(notification(undefined, { type: 'NONE' })).toEqual(initState);
+        expect(notification(undefined, { type: 'NONE' }))
+          .toEqual(initState.notification);
       },
     );
 
