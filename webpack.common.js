@@ -15,7 +15,6 @@ module.exports = {
       Store: path.resolve(__dirname, 'src/scripts/store/'),
       Services: path.resolve(__dirname, 'src/scripts/services/'),
       Config: path.resolve(__dirname, 'src/scripts/config/'),
-      AppRoot: path.resolve(__dirname, 'src/scripts/'),
       Components: path.resolve(
         __dirname,
         'src/scripts/application/components/',
