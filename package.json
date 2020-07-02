@@ -13,6 +13,9 @@
     "url": "https://github.com/westpole/react-env-setup/issues"
   },
   "scripts": {
+    "report:clear": "rm -Rf reports/*",
+    "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js",
+    "report:unit": "cross-env REPORT_TYPE=unit node tools/open-report.js",
     "lint": "eslint src/scripts/** --ext .tsx,.ts --color",
     "lint:report": "eslint src/scripts/** --ext .tsx,.ts --color --format=json -o ./reports/eslint.json",
     "lint:test": "eslint src/scripts/**/*.spec* --ext .ts --color",
@@ -27,15 +30,13 @@
     "snapshot-update": "jest -u --color",
     "todo": "leasot --exit-nicely src/scripts/**/*.ts src/scripts/**/*.tsx",
     "todo-cli": "leasot --exit-nicely --reporter markdown src/scripts/**/*.ts src/scripts/**/*.tsx > reports/TODO.md",
-    "prebuild": "npm run lint:report && npm test",
+    "prebuild": "npm run report:clear && npm run lint:report && npm test",
     "build": "webpack --config webpack.prod.js",
     "postbuild": "npm run changelog",
     "release:major": "npm version major",
     "release:minor": "npm version minor",
     "release:patch": "npm version patch",
-    "postversion": "npm run changelog && npm run git:commit && npm run git:push",
-    "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js",
-    "report:unit": "cross-env REPORT_TYPE=unit node tools/open-report.js"
+    "postversion": "npm run changelog && npm run git:commit && npm run git:push"
   },
   "keywords": [
     "React",
