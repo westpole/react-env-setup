@@ -19,7 +19,8 @@
         "Store": "./src/scripts/store",
         "Services": "./src/scripts/services",
         "Config": "./src/scripts/config",
-        "Root": "./src/scripts/application"
+        "Root": "./src/scripts/application",
+        "TestTools": "./tools/test-utils"
       }
     }]
   ]

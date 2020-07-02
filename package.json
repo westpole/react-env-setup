@@ -34,7 +34,8 @@
     "release:minor": "npm version minor",
     "release:patch": "npm version patch",
     "postversion": "npm run changelog && npm run git:commit && npm run git:push",
-    "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js"
+    "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js",
+    "report:unit": "cross-env REPORT_TYPE=unit node tools/open-report.js"
   },
   "keywords": [
     "React",

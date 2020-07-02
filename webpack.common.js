@@ -16,6 +16,7 @@ module.exports = {
       Services: path.resolve(__dirname, 'src/scripts/services/'),
       Config: path.resolve(__dirname, 'src/scripts/config/'),
       Root: path.resolve(__dirname, 'src/scripts/application/'),
+      TestTools: path.resolve(__dirname, 'tools/test-utils/'),
     },
   },
   module: {

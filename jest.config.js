@@ -39,5 +39,6 @@ module.exports = {
     'Store(.*)$': '<rootDir>/src/scripts/store/$1',
     'Config(.*)$': '<rootDir>/src/scripts/config/$1',
     'Services(.*)$': '<rootDir>/src/scripts/services/$1',
+    'TestTools(.*)$': '<rootDir>/tools/test-utils/$1',
   },
 };

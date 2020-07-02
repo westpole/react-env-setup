@@ -14,13 +14,14 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "strict": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "Assets/*": ["assets/*"],
-      "Store/*": ["scripts/store/*"],
-      "Services/*": ["scripts/services/*"],
-      "Config/*": ["scripts/config/*"],
-      "Root/*": ["scripts/application/*"],
+      "Assets/*": ["src/assets/*"],
+      "Store/*": ["src/scripts/store/*"],
+      "Services/*": ["src/scripts/services/*"],
+      "Config/*": ["src/scripts/config/*"],
+      "Root/*": ["src/scripts/application/*"],
+      "TestTools/*": ["tools/test-utils/*"],
     },
     "typeRoots": [
       "./node_modules/@types"
