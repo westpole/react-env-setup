@@ -1,6 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 
-const opn = require('opn');
+const opn = require('open');
 
 require('dotenv').config();
 
