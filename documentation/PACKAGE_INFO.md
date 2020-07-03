@@ -9,7 +9,6 @@ Package list:
   - `react`
   - `react-dom`
   - `react-router-dom`
-  - `prop-types` (type validation for Component props, [more here](https://reactjs.org/docs/typechecking-with-proptypes.html))
 
 Links:
 

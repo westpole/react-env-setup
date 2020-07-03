@@ -7,7 +7,7 @@
 #### Backlog
 
 1. Project's configuration:
-    - [ ] Add PropTypes!
+    - [x] Add PropTypes?
     - [ ] Prettier
     - [ ] npm audit fix - build report
     - [ ] run check for new versions - build report (email notification)
@@ -16,6 +16,7 @@
 
 2. React application settings:
     - [ ] https://fb.me/react-error-boundaries
+    - [ ] enable router
     - [ ] e2e tests (Cypress) https://docs.cypress.io/guides/guides/continuous-integration.html#Travis
     - [ ] https://github.com/reduxjs/redux-thunk
     - [ ] https://www.npmjs.com/package/react-helmet
