@@ -16,6 +16,8 @@
     "report:clear": "rm -Rf reports/*",
     "report:bundle": "cross-env REPORT_TYPE=bundle node tools/open-report.js",
     "report:unit": "cross-env REPORT_TYPE=unit node tools/open-report.js",
+    "report:audit": "cross-env REPORT_TYPE=audit node tools/open-report.js",
+    "source:audit": "npm audit --json | npm-audit-html --output reports/npm-audit.html",
     "lint": "eslint src/scripts/** --ext .tsx,.ts --color",
     "lint:report": "eslint src/scripts/** --ext .tsx,.ts --color --format=json -o ./reports/eslint.json",
     "commit": "git-cz",
@@ -62,7 +64,10 @@
     }
   },
   "lint-staged": {
-    "**/*(t|j)sx?$": ["eslint", "prettier --write"]
+    "**/*(t|j)sx?$": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@types/redux-mock-store": "^1.0.2",
@@ -117,6 +122,7 @@
     "jest": "^26.0.1",
     "leasot": "^11.0.0",
     "lint-staged": "^10.2.11",
+    "npm-audit-html": "^1.4.1",
     "open": "^7.0.4",
     "prettier": "2.0.5",
     "redux-mock-store": "^1.5.4",

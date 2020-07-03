@@ -8,8 +8,8 @@
 
 1. Project's configuration:
     - [x] Add PropTypes?
-    - [ ] Prettier
-    - [ ] npm audit fix - build report
+    - [x] Prettier
+    - [x] npm audit fix - build report
     - [ ] run check for new versions - build report (email notification)
     - [ ] Slack integration?
     - [ ] Lighthouse integration

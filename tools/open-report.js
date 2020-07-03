@@ -23,6 +23,12 @@ const reportMap = {
       'lighthouse.html',
     ],
   },
+  audit: {
+    dir: 'reports',
+    entry: [
+      'npm-audit.html',
+    ],
+  },
 };
 
 const reportType = process.env.REPORT_TYPE;

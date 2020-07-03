@@ -107,6 +107,7 @@ Package list:
   - `eslint-import-resolver-webpack` (Webpack-literate module resolution plugin for eslint-plugin-import)
   - `eslint-plugin-react-hooks` (This ESLint plugin enforces the Rules of Hooks)
   - `eslint-plugin-testing-library` (ESLint plugin to follow best practices and anticipate common mistakes when writing tests with Testing Library)
+  - `eslint-config-prettier` (Turns off all rules that are unnecessary or might conflict with Prettier, [more here](https://github.com/prettier/eslint-config-prettier))
 
 Links:
 
@@ -152,6 +153,8 @@ Package list:
   - `cz-conventional-changelog` (Part of the commitizen family. Prompts for conventional changelog standard)
   - `@commitlint/cli` (Lint commit messages)
   - `@commitlint/config-angular` (Lint your commits, angular-style)
+  - `lint-staged` (Run linters against staged git files)
+  - `prettier` (Prettier is an opinionated code formatter, [more here](https://prettier.io/docs/en/index.html))
 
 ### leasot
 
@@ -197,3 +200,11 @@ Supported CI services: Travis CI, CodeShip, CircleCI, Jenkins, Gitlab CI, AppVey
 Links:
 
   - Official documentation could be found at [npmjs.com/package/coveralls](https://www.npmjs.com/package/coveralls)
+
+### npm-audit-html
+
+Generate a HTML report for NPM Audit.
+
+Links:
+
+  - Official documentation could be found at [npmjs.com/package/npm-audit-html](https://www.npmjs.com/package/npm-audit-html)
