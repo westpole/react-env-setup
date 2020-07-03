@@ -17,7 +17,8 @@
   },
   "extends": [
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "prettier"
   ],
   "settings": {
     "react": {

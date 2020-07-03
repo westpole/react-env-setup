@@ -7,3 +7,8 @@
 *.snap
 *.md
 *.json
+
+node_modules
+dist
+coverage
+reports
